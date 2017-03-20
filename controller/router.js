@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
 	res.render(
 		'index',
 		{
-			title: "Apple Index",
+			title: "Index",
 			head: "Apple Index"
 		}
 	)
@@ -20,7 +20,7 @@ router.get('/index', function (req, res) {
 	res.render(
 		'index',
 		{
-			title: "Apple Index",
+			title: "Index",
 			head: "Apple Index"
 		}
 	)
@@ -30,7 +30,7 @@ router.get('/news', function (req, res) {
 	res.render(
 		'news',
 		{
-			title: "Apple News",
+			title: "News",
 			head: "苹果咨询"
 		}
 	)
@@ -40,7 +40,7 @@ router.get('/newsDetails', function (req, res) {
 	res.render(
 		'newsDetails',
 		{
-			title: "Apple News Details",
+			title: "News Details",
 			head: "苹果咨询详情"
 		}
 	)
@@ -50,8 +50,18 @@ router.get('/price', function (req, res) {
 	res.render(
 		'price',
 		{
-			title: "Apple Price",
+			title: "Price",
 			head: "苹果报价"
+		}
+	)
+});
+
+router.get('/update', function (req, res) {
+	res.render(
+		'update',
+		{
+			title: "Update",
+			head: "苹果更新周期"
 		}
 	)
 });
