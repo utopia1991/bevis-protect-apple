@@ -1,0 +1,267 @@
+/* 小工具 */
+@default-yellow: #ffb515;
+@default-gray: #ccc;
+@screen-xs: 480px;
+
+* {
+  font-family: "Microsoft Yahei";
+}
+
+a {
+  cursor: pointer;
+}
+
+hr {
+  border-bottom: 1px solid #ccc;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: tx; /*这里是说明调用来的字体名字*/
+  src: url('../fonts/tengxiang.ttf'); /*这里是字体文件路径*/
+}
+
+.sep {
+  margin: 0 1em;
+  color: #424242;
+}
+
+.right-arror {
+  display: inline-block;
+  height: 11px;
+  width: 10px;
+  margin: 0 8px;
+  background: url("../images/news/right-arror.png") no-repeat;
+}
+
+.inner {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.content {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* header */
+header {
+  position: relative;
+  z-index: 30;
+  height: 100px;
+  font-size: 12px;
+  color: #b0b0b0;
+  background: #272727;
+
+  .topbar-logo {
+    float: left;
+    display: inline-block;
+    width: 160px;
+    margin: 25px 20px 0 0;
+    padding: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .topbar-nav {
+    float: left;
+    height: 100px;
+    line-height: 100px;
+    overflow: hidden;
+    padding: 0;
+    _zoom: 1;
+
+    a {
+      margin-right: 2%;
+      color: #fff;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 2px solid #272727;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+        color: #e5c188;
+        border-bottom: 2px solid #e5c188;
+      }
+    }
+  }
+
+  .topbar-info {
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    line-height: 100px;
+    text-align: right;
+
+    .header-search,.header-search {
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .header-search {
+      margin-right: 15%;
+    }
+
+    .header-share {
+      margin-right: 5%;
+    }
+  }
+}
+
+.side-nav {
+  position: fixed;
+  top: 200px;
+  right: 10px;
+  width: 100px;
+  height: 265px;
+  background: #000;
+
+  p {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background: @default-yellow;
+    text-align: center;
+    margin: 0;
+    color: #000;
+  }
+
+  .product-line {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #666;
+  }
+
+  .wechat {
+    width: 100%;
+    height: 114px;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid @default-gray;
+
+    img {
+      width: 100%;
+    }
+
+    div {
+    font-size: 12px;
+    width: 100%;
+    color: @default-gray;
+    text-align: center;
+    }
+  }
+
+  #back-top {
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    padding: 8px 36px;
+  }
+}
+
+/* footer */
+footer {
+  width: 100%;
+
+  .home-info {
+    width: 100%;
+    height: 160px;
+    text-align: center;
+
+    .home-info-img {
+      width: 220px;
+      height: 80px;
+      display: inline-block;
+      margin: 50px auto 0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer-bottom {
+    background: #1b1b1b;
+    height: 200px;
+    padding-top: 65px;
+
+    .footbar-left {
+      float: left;
+      padding: 0;
+      margin: 0;
+
+      .footbar-left-line {
+        width: 55px;
+        height: 3px;
+        border-top: 3px solid @default-yellow;
+      }
+
+      .footbar-left-about {
+        color: #fff;
+      }
+
+      .footbar-left-copyright {
+        color: #666;
+      }
+    }
+
+    .footbar-right {
+      float: right;
+      padding: 0;
+      margin: 0;
+
+      .footbar-right-icon {
+        padding: 0 10px;
+        display: inline-block;
+        float: left;
+        margin: 0 12px;
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+        font-weight: 300;
+        height: 80px;
+        width: 80px;
+
+        img {
+          width: 100%;
+        }
+
+        span {
+          display: inline-block;
+          margin-top: 10px;
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,468 @@
+@import url("./common.less");
+
+.price-product-line {
+  width: 100%;
+  margin: 40px auto 80px;
+
+  &:last-child {
+    margin: 40px auto 40px;
+  }
+
+  .price-product-title {
+    width: 100%;
+    text-align: center;
+    height: 60px;
+    text-transform: uppercase;
+    margin: 0;
+    position: relative;
+
+    .middle-line {
+      width: 100%;
+      display: inline-block;
+      height: 25px;
+      border-bottom: 1px solid @default-gray;
+    }
+
+    .title {
+      font-family: tx;
+      position: absolute;
+      display: inline-block;
+      height: 30px;
+      font-size: 30px;
+      width: 320px;
+      top: 4px;
+      background: #fff;
+      left: 50%;
+      margin-left: -160px;
+    }
+  }
+
+  .price-today {
+    width: 100%;
+    height: 32px;
+    margin: 0px auto 30px;
+
+    .price-today-left {
+      font-family: tx;
+      float: left;
+      font-size: 22px;
+      color: #333;
+      position: relative;
+
+      img {
+        position: relative;
+        top: -3px;
+        margin-right: -3px;
+      }
+
+      span, a{
+        display: inline-block;
+      }
+
+      .product-line-select {
+        position: relative;
+        top: 3px;
+        border: 1px solid @default-gray;
+        display: inline-block;
+        height: 26px;
+        line-height: 22px;
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+
+        #ipadSelectShow {
+          width: 160px;
+        }
+
+        #macSelectShow {
+          width: 220px;
+        }
+
+        &:after {
+          border-color: @default-gray;
+          border-style: solid solid none none;
+          border-width: 1px 1px 0 medium;
+          content: "";
+          display: block;
+          height: 7px;
+          position: absolute;
+          right: 8px;
+          top: 7px;
+          -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+          width: 7px;
+        }
+
+        .selectShow {
+          background-color: rgba(0, 0, 0, 0);
+          border: 0 none;
+          text-align: center;
+          font-size: 12px;
+          width: 100%;
+          margin-left: -6px;
+        }
+
+        .selectHide {
+          font-size: 12px;
+          border: 0 none;
+          height: 30px;
+          left: 9px;
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          z-index: 99;
+          width: 100%;
+        }
+      }
+
+      .dropdown-menu {
+        min-width: 100% !important;
+
+        li {
+          a {
+            width: 100%;
+          }
+        }
+      }
+
+      .view-msg {
+        color: #f14b4b;
+        font-size: 12px;
+        display: inline-block;
+        line-height: 30px;
+        position: relative;
+        top: -3px;
+        margin-left: 20px;
+      }
+
+    }
+
+    .price-today-right {
+      float: right;
+
+      .more-price {
+        font-family: tx;
+        font-size: 22px;
+        color: #333;
+
+        img {
+          margin-top: -6px;
+        }
+      }
+    }
+
+    .product-line-type {
+      position: relative;
+      font-size: 14px;
+      padding: 3px 15px;
+      color: #fff;
+      background: #000;
+      top: -3px;
+
+      &:hover {
+        color: #000;
+        background: @default-yellow;
+      }
+    }
+
+    .type-active {
+      color: #000;
+      background: @default-yellow;
+    }
+  }
+
+  .price-shop {
+    width: 100%;
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        min-width: 120px;
+        width: 11.78%;
+        margin: 0 0.2%;
+        height: 160px;
+        display: inline-block;
+        border: 1px solid @default-gray;
+        position: relative;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .price-shop-top {
+          width: 100%;
+          height: 113px;
+          padding: 10px 8px;
+          background: #fff;
+
+          .price-shop-name {
+            display: inline-block;
+            width: 20%;
+            height: 88%;
+            padding-right: 3px;
+            color: @default-gray;
+            border-right: 1px solid @default-gray;
+            float: left;
+            margin-right: 8%;
+            position: relative;
+
+            .shop-name-2-chars {
+              display: inline-block;
+              position: relative;
+              margin-top: 20px;
+            }
+
+            .shop-name-3-chars {
+              display: inline-block;
+              position: relative;
+              margin-top: 10px;
+            }
+          }
+
+          .price-shop-fee {
+            display: inline-block;
+            height: 90%;
+            width: 70%;
+
+            p {
+              margin: 0;
+              width: 100%;
+              height: 33%;
+              color: #666;
+              line-height: 28px;
+
+              .price-memory {
+                float: left;
+              }
+
+              .price-fee {
+                float: right;
+              }
+            }
+          }
+        }
+
+        .price-msg {
+          position: absolute;
+          color: red;
+          font-size: 12px;
+          width: 100%;
+          text-align: center;
+          bottom: 46px;
+        }
+
+        .price-shop-bottom {
+          display: inline-block;
+          width: 100%;
+          height: 45px;
+          background: #000;
+          color: #fff;
+          text-align: center;
+          line-height: 45px;
+
+          &:hover {
+            background: #f14b4b;
+          }
+        }
+      }
+    }
+  }
+
+  .price-bg {
+    position: absolute;
+    width: 100%;
+    height: 460px;
+    left: 0px;
+    margin-top: -80px;
+    background: url("../images/price/bg.jpg") no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .mac-bg {
+    height: 520px;
+  }
+
+  .price-date {
+    margin-top: 20px;
+    width: 100%;
+
+    .price-price-ul {
+      margin: 0;
+      padding: 0;
+
+      .price-price-li {
+        display: inline-block;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        position: relative;
+        margin: 20px auto;
+
+        &:nth-child(odd) {
+          margin-left: 0;
+        }
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+
+        &:hover {
+          background: #000;
+          color: #fff;
+
+          .price-date-block {
+            background: #fff;
+
+            p {
+              color: #000;
+            }
+          }
+
+          .price-block a {
+            color: #fff;
+          }
+        }
+
+        .price-date-block {
+          position: absolute;
+          height: 100%;
+          width: 50px;
+          border: 2px solid #000;
+          top: -16px;
+
+          p {
+            height: 65%;
+            margin: 0;
+            text-align: center;
+          }
+
+          .price-date-day {
+            font-size: 30px;
+          }
+
+          .price-date-year {
+            font-size: 12px;
+          }
+
+        }
+
+        .mac-date-block {
+          padding: 10px 0;
+        }
+
+        .price-block {
+          width: 92%;
+          margin-left: 60px;
+
+          a {
+            color: #555;
+            font-size: 12px;
+
+            &:hover {
+              text-decoration: underline;
+              color: @default-yellow;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .price-pagination {
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+    .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus, .active {
+      color: #000;
+      background: @default-yellow;
+    }
+
+    .pagination {
+      display: inline-block;
+      margin: 5px 10px 0 0;
+
+      li {
+        a {
+          border-radius: 0;
+          padding: 3px 10px;
+          color: #666;
+        }
+
+        .page-left-arrow {
+          margin: 0 6px 0 0;
+          font-size: 30px;
+          padding: 0 6px;
+          line-height: 26px;
+          font-weight: 300;
+        }
+
+        .page-right-arrow{
+          margin: 0 0 0 6px;
+          font-size: 30px;
+          padding: 0 6px;
+          line-height: 26px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .pagination-turn {
+      display: inline-block;
+      position: relative;
+      top: -8px;
+
+      div {
+        margin: 0 10px;
+      }
+
+      div, a {
+        color: #555;
+        display: inline-block;
+      }
+
+      input {
+        width: 40px;
+        outline: none;
+        text-align: center;
+      }
+
+      a {
+        padding: 3px 15px;
+        color: #000;
+        background: @default-yellow;
+      }
+    }
+
+  }
+
+  .price-more-link {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+
+    .price-more {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      color: #555;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+
+      span {
+        color: #999;
+      }
+    }
+  }
+
+}
