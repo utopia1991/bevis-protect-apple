@@ -1,2 +1,4 @@
 node_modules
+assets
 .idea
+.DS_Store
