@@ -70,9 +70,10 @@ header {
   .topbar-logo {
     float: left;
     display: inline-block;
-    width: 160px;
     margin: 25px 20px 0 0;
     padding: 0;
+    width: 16%;
+    min-width: 160px;
 
     img {
       width: 100%;
@@ -85,6 +86,7 @@ header {
     line-height: 100px;
     overflow: hidden;
     padding: 0;
+    width: 65%;
     _zoom: 1;
 
     a {
@@ -110,6 +112,8 @@ header {
     height: 100px;
     line-height: 100px;
     text-align: right;
+    width: 16%;
+    float: right;
 
     .header-search,.header-search {
       width: 22px;
@@ -261,7 +265,11 @@ footer {
         }
       }
     }
-
   }
+}
 
+@media (min-width: @screen-xs) and (max-width: 980px) {
+  header .topbar-nav {
+    width: 61%;
+  }
 }

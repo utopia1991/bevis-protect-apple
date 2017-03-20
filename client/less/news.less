@@ -2,9 +2,11 @@
 
 .news-nav {
 
-  width: 100%;
+  width: 80%;
   height: 190px;
   padding: 25px 0;
+  text-align: center;
+  margin: 0 auto;
 
   .news-nav-items {
     display: inline-block;
@@ -12,8 +14,7 @@
     margin: 0 3.6%;
     min-width: 100px;
     float: left;
-
-
+    padding: 0;
 
     .news-icon {
       display: inline-block;
@@ -165,9 +166,10 @@
       .news-content-share-block {
         position: absolute;
         display: none;
-        width: 100%;
+        width: 98%;
         border: 1px solid @default-gray;
         height: 220px;
+        margin-left: 2%;
 
         .news-content-share-top {
           height: 220px;
@@ -179,6 +181,8 @@
             padding-left: 12px;
             height: 180px;
             border-right: 1px solid @default-gray;
+            width: 68%;
+            float: left;
 
             .news-content-share-icon {
               height: 80px;
@@ -241,6 +245,8 @@
           }
 
           .news-content-share-right {
+            width: 32%;
+            float: right;
             text-align: center;
 
             p {
