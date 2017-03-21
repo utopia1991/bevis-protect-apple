@@ -1,7 +1,702 @@
-.home-bg {
-  width: 100%;
+@import url("./common.less");
 
-  img {
-    width: 100%;
-  }
+#apple {
+	position: relative;
+
+	.home-bg {
+		width: 100%;
+		position: relative;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.home-carousel {
+		width: 100%;
+		position: absolute;
+		top: 100px;
+
+		.inner {
+
+			.index-carousel {
+				display: inline-block;
+				position: absolute;
+				width: 80%;
+				margin: 0 auto;
+				top: 0px;
+
+				.news-content-right {
+					position: absolute;
+					right: 0px;
+					top: 60px;
+					width: 350px;
+					background: #282828;
+					color: #fff;
+
+					.news-top {
+						width: 100%;
+						padding: 20px;
+
+						.news-top-title {
+								font-size: 26px;
+								font-weight: 600;
+
+								.news-carousel {
+									display: inline-block;
+									width: 56px;
+									height: 27px;
+									float: right;
+									position: relative;
+									margin-top: 6px;
+
+									.carousel-control {
+										position: absolute;
+										height: 25px;
+										width: 25px;
+										opacity: 1;
+										border: 1px solid @default-gray;
+										text-shadow: none;
+										color: @default-gray;
+										line-height: 24px;
+										font-size: 30px;
+										font-weight: 300;
+
+										&:hover {
+											background: @default-yellow;
+											color: #000;
+										}
+									}
+								}
+							}
+
+						ul {
+								padding: 0;
+								margin-top: 20px;
+
+								.hot-img {
+									width: 100%;
+									height: 138px;
+									padding: 0 5px;
+
+									img {
+										height: 100%;
+										width: 100%;
+									}
+								}
+
+								li {
+									width: 100%;
+									list-style: none;
+									display: inline-block;
+									margin: 5px auto;
+
+									.news-top-img {
+										display: inline-block;
+										padding: 0;
+										float: left;
+
+										img {
+											width: 100%;
+										}
+									}
+
+									.news-top-discription {
+										padding-right: 0;
+
+										a {
+											display: inline-block;
+											margin-bottom: 5px;
+											color: #fff;
+										}
+
+										.news-view {
+											span {
+												font-size: 12px;
+												color: #fff;
+												margin-right: 15px;
+
+												img {
+													width: 18px;
+													margin-right: 8px;
+												}
+											}
+										}
+									}
+								}
+							}
+					}
+				}
+			}
+		}
+	}
+
+	.home-container {
+
+		.home-iphone, .home-ipad, .home-mac {
+			width: 100%;
+			height: 840px;
+		}
+
+		.price-product-line {
+			width: 100%;
+			margin: 40px auto 30px;
+
+			&:last-child {
+				margin: 40px auto 40px;
+			}
+
+			.price-product-title {
+				width: 100%;
+				text-align: center;
+				height: 60px;
+				text-transform: uppercase;
+				margin: 0;
+				position: relative;
+
+				.middle-line {
+					width: 100%;
+					display: inline-block;
+					height: 25px;
+					border-bottom: 1px solid @default-gray;
+					position: absolute;
+					left: 0px;
+				}
+
+				.title {
+					font-family: tx;
+					position: absolute;
+					display: inline-block;
+					height: 30px;
+					font-size: 30px;
+					width: 320px;
+					top: 4px;
+					background: #fff;
+					left: 50%;
+					margin-left: -160px;
+				}
+			}
+
+			.price-today {
+				width: 100%;
+				height: 32px;
+				margin: 0px auto 30px;
+
+				.price-today-left {
+					font-family: tx;
+					float: left;
+					font-size: 22px;
+					color: #333;
+					position: relative;
+
+					img {
+						position: relative;
+						top: -3px;
+						margin-right: -3px;
+					}
+
+					span, a{
+						display: inline-block;
+					}
+
+					.product-line-select {
+						position: relative;
+						top: 3px;
+						border: 1px solid @default-gray;
+						display: inline-block;
+						height: 26px;
+						line-height: 22px;
+						position: relative;
+						text-align: center;
+						vertical-align: middle;
+
+						#ipadSelectShow {
+							width: 160px;
+						}
+
+						#macSelectShow {
+							width: 220px;
+						}
+
+						&:after {
+							border-color: @default-gray;
+							border-style: solid solid none none;
+							border-width: 1px 1px 0 medium;
+							content: "";
+							display: block;
+							height: 7px;
+							position: absolute;
+							right: 8px;
+							top: 7px;
+							-webkit-transform: rotate(135deg);
+							transform: rotate(135deg);
+							width: 7px;
+						}
+
+						.selectShow {
+							background-color: rgba(0, 0, 0, 0);
+							border: 0 none;
+							text-align: center;
+							font-size: 12px;
+							width: 100%;
+							margin-left: -6px;
+						}
+
+						.selectHide {
+							font-size: 12px;
+							border: 0 none;
+							height: 30px;
+							left: 9px;
+							opacity: 0;
+							position: absolute;
+							top: 0;
+							z-index: 99;
+							width: 100%;
+						}
+					}
+
+					.dropdown-menu {
+						min-width: 100% !important;
+
+						li {
+							a {
+								width: 100%;
+							}
+						}
+					}
+
+					.view-msg {
+						color: #f14b4b;
+						font-size: 12px;
+						display: inline-block;
+						line-height: 30px;
+						position: relative;
+						top: -3px;
+						margin-left: 10px;
+					}
+
+				}
+
+				.price-today-right {
+					float: right;
+
+					.more-price {
+						font-family: tx;
+						font-size: 22px;
+						color: #333;
+
+						img {
+							margin-top: -6px;
+						}
+					}
+				}
+
+				.product-line-type {
+					position: relative;
+					font-size: 14px;
+					padding: 3px 15px;
+					color: #fff;
+					background: #000;
+					top: -3px;
+
+					&:hover {
+						color: #000;
+						background: @default-yellow;
+					}
+				}
+
+				.type-active {
+					color: #000;
+					background: @default-yellow;
+				}
+			}
+
+			.price-shop {
+				width: 100%;
+
+				ul {
+					padding: 0;
+					margin: 0;
+
+					li {
+						min-width: 120px;
+						width: 11.75%;
+						margin: 0 0.2%;
+						height: 160px;
+						display: inline-block;
+						border: 1px solid @default-gray;
+						position: relative;
+
+						&:first-child {
+							margin-left: 0;
+						}
+
+						&:last-child {
+							margin-right: 0;
+						}
+
+						.price-shop-top {
+							width: 100%;
+							height: 113px;
+							padding: 10px 8px;
+							background: #fff;
+
+							.price-shop-name {
+								display: inline-block;
+								width: 20%;
+								height: 88%;
+								padding-right: 3px;
+								color: @default-gray;
+								border-right: 1px solid @default-gray;
+								float: left;
+								margin-right: 8%;
+								position: relative;
+
+								.shop-name-2-chars {
+									display: inline-block;
+									position: relative;
+									margin-top: 20px;
+								}
+
+								.shop-name-3-chars {
+									display: inline-block;
+									position: relative;
+									margin-top: 10px;
+								}
+							}
+
+							.price-shop-fee {
+								display: inline-block;
+								height: 90%;
+								width: 70%;
+
+								p {
+									margin: 0;
+									width: 100%;
+									height: 33%;
+									color: #666;
+									line-height: 28px;
+
+									.price-memory {
+										float: left;
+									}
+
+									.price-fee {
+										float: right;
+									}
+								}
+							}
+						}
+
+						.price-msg {
+							position: absolute;
+							color: red;
+							font-size: 12px;
+							width: 100%;
+							text-align: center;
+							bottom: 46px;
+						}
+
+						.price-shop-bottom {
+							display: inline-block;
+							width: 100%;
+							height: 45px;
+							background: #000;
+							color: #fff;
+							text-align: center;
+							line-height: 45px;
+
+							&:hover {
+								background: #f14b4b;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.home-info {
+			width: 100%;
+			margin: 10px auto;
+
+			.up-il {
+				display: inline-block;
+				width: 31.5%;
+				margin: 0 1.8% 0 0;
+				float: left;
+
+				.up-title {
+					border-left: 3px solid #000;
+					height: 25px;
+					font-size: 22px;
+					line-height: 25px;
+					font-family: tx;
+					padding-left: 8px;
+					position: relative;
+					margin-bottom: 25px;
+
+					a {
+						display: inline-block;
+						position: absolute;
+						font-size: 14px;
+						line-height: 14px;
+						height: 14px;
+						color: #777;
+						text-transform: uppercase;
+						right: 0;
+						top: 6px;
+
+						&:hover {
+							color: @default-yellow;
+						}
+					}
+				}
+
+				.home-video {
+					width: 100%;
+					height: 240px;
+
+					a {
+						display: block;
+					}
+
+					.video {
+						height: 210px;
+						width: 100%;
+						margin-bottom: 10px;
+
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+
+					.video-label {
+						font-size: 14px;
+						color: #555;
+						text-align: left;
+						height: 20px;
+						line-height: 20px;
+					}
+
+				}
+
+				.home-news-ul {
+					margin: 0;
+					padding: 0;
+
+					.home-news-li {
+						display: inline-block;
+						width: 100%;
+						height: 74px;
+						margin-top: 6px;
+						border-bottom: 1px solid @default-gray;
+
+						.home-news-img {
+							display: inline-block;
+							width: 96px;
+							height: 68px;
+							float: left;
+
+							img {
+								width: 100%;
+								height: 100%;
+							}
+						}
+
+						.home-news-info {
+							display: inline-block;
+							width: 210px;
+							margin-left: 10px;
+							color: #555;
+
+							a {
+								display: block;
+								height: 47px;
+							}
+
+							.home-news-label {
+								display: inline-block;
+								background: #f5f5f5;
+								color: #777;
+								padding: 2px;
+								float: left;
+								font-size: 12px;
+								margin-right: 10px;
+								width: 70px;
+								text-align: center;
+							}
+						}
+					}
+				}
+
+				.up-info {
+					width: 100%;
+					height: 170px;
+					border-bottom: 1px solid @default-gray;
+
+					.up-img {
+						display: inline-block;
+						width: 35%;
+						min-width: 122px;
+						height: 110px;
+						float: left;
+
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+
+					.up-msg {
+						float: right;
+						width: 60%;
+						height: 100%;
+
+						.up-msg-title {
+							font-size: 20px;
+							margin-bottom: 3px;
+						}
+
+						.up-button {
+							display: inline-block;
+							padding: 0 15px 0 0;
+							border: 1px solid @default-yellow;
+							background: #fff;
+							color: #000;
+							border-radius: 4px;
+							margin-bottom: 3px;
+
+							span {
+								background: @default-yellow;
+								display: inline-block;
+								padding: 0 15px;
+								color: #fff;
+								font-weight: bold;
+								margin-right: 10px;
+							}
+						}
+
+						.up-msg-info {
+							font-size: 12px;
+							color: #777;
+							height: 100px;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+					}
+				}
+
+				.up-progress {
+					width: 100%;
+					height: 55px;
+					border-bottom: 1px solid #ccc;
+					color: #555;
+					line-height: 48px;
+					position: relative;
+					font-size: 12px;
+
+					&:hover {
+						.progress .progress-bar {
+							background-color: @default-yellow;
+						}
+
+						.up-count {
+							color: @default-yellow;
+						}
+					}
+
+					.up-date {
+						font-size: 14px;
+						position: absolute;
+						margin: 0;
+						padding: 0;
+						top: -6px;
+						left: 42%;
+						height: 14px;
+					}
+
+					.progress {
+						width: 40%;
+						height: 8px;
+						display: inline-block;
+						position: absolute;
+						top: 30px;
+						right: 60px;
+
+						.progress-bar {
+							background-color: #808080;
+							border-radius: 10px;
+						}
+					}
+
+					.up-count {
+						float: right;
+						color: #555;
+						font-size: 30px;
+					}
+
+					.count-coverage {
+						font-size: 22px;
+					}
+				}
+
+				.progress-coverage {
+					line-height: 55px;
+				}
+
+				.up-history {
+					width: 100%;
+					height: 160px;
+					line-height: 55px;
+					font-size: 12px;
+
+					.up-history-ul {
+						width: 72%;
+						float: right;
+						margin: 8px 0 0 0;
+						padding: 0;
+
+						.up-history-li {
+							padding: 0;
+							margin: 0;
+							width: 100%;
+							display: inline-block;
+							height: 32px;
+							line-height: 32px;
+							border-bottom: 1px solid @default-gray;
+							position: relative;
+
+							a {
+								display: inline-block;
+
+								&:hover {
+									color: @default-yellow;
+								}
+							}
+
+							span {
+								right: 0;
+								position: absolute;
+								top: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
+
+@media (min-width: @screen-xs) and (max-width: 980px){
+	#apple .home-carousel .inner .index-carousel .news-content-right .news-top ul li {
+		.news-top-img {
+			width: 40%;
+		}
+		.news-top-discription {
+			width: 56%;
+			float: right;
+		}
+	}
 }
