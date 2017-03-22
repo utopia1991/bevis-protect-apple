@@ -1,6 +1,6 @@
 @import url("./common.less");
 
-#apple {
+.apple {
 	position: relative;
 
 	.home-bg {
@@ -18,7 +18,6 @@
 		top: 100px;
 
 		.inner {
-
 			.index-carousel {
 				display: inline-block;
 				position: absolute;
@@ -135,7 +134,6 @@
 
 		.home-iphone, .home-ipad, .home-mac {
 			width: 100%;
-			height: 840px;
 		}
 
 		.price-product-line {
@@ -266,7 +264,7 @@
 					}
 
 					.view-msg {
-						color: #f14b4b;
+						color: @default-red;
 						font-size: 12px;
 						display: inline-block;
 						line-height: 30px;
@@ -407,7 +405,7 @@
 							line-height: 45px;
 
 							&:hover {
-								background: #f14b4b;
+								background: @default-red;
 							}
 						}
 					}
@@ -433,7 +431,6 @@
 					font-family: tx;
 					padding-left: 8px;
 					position: relative;
-					margin-bottom: 25px;
 
 					a {
 						display: inline-block;
@@ -463,7 +460,7 @@
 					.video {
 						height: 210px;
 						width: 100%;
-						margin-bottom: 10px;
+						margin-bottom: 5px;
 
 						img {
 							width: 100%;
@@ -684,8 +681,192 @@
 					}
 				}
 			}
-		}
 
+			.home-parts {
+				width: 100%;
+				margin: 20px auto;
+
+				.up-title {
+					.home-part-right {
+						display: inline-block;
+						float: right;
+						position: relative;
+						line-height: 10px;
+
+						.home-part-series {
+							display: inline-block;
+							font-size: 14px;
+							height: 14px;
+							line-height: 14px;
+							color: #555;
+							position: relative;
+
+							&:last-child {
+								margin-left: 30px;
+							}
+
+							.home-part-icon {
+								position: relative;
+								height: 16px;
+								top: -2px;
+
+								img {
+									height: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.home-shop-items {
+				width: 100%;
+				height: 600px;
+
+				.home-items-left {
+					display: inline-block;
+					height: 500px;
+					width: 19%;
+					min-width: 213px;
+
+					img {
+						height: 100%;
+						width: 100%;
+					}
+				}
+
+				.home-items-right {
+					width: 80%;
+					height: 520px;
+					float: right;
+
+					.full-items-ul {
+						width: 102%;
+					}
+
+					.home-items-ul {
+						display: inline-block;
+						padding: 0;
+						margin: 0;
+						width: 100%;
+
+						.home-items-li {
+							display: inline-block;
+							margin: 0 0 20px 2%;
+							width: 23%;
+							height: 240px;
+							float: left;
+							position: relative;
+							overflow: hidden;
+
+							.item-active {
+								display: block;
+								padding: 10px 0;
+								width: 100%;
+								height: 100%;
+								text-align: center;
+								background: #fff;
+
+								.item {
+									position: absolute;
+									right: 10px;
+									top: 0px;
+									padding: 3px 8px;
+									color: #fff;
+									font-size: 14px;
+								}
+
+								.item-tm {
+									background: @default-red;
+								}
+
+								.item-tb {
+									background: @default-yellow;
+								}
+
+								.item-name {
+									display: inline-block;
+									height: 16px;
+									line-height: 16px;
+									font-size: 14px;
+									color: #555;
+									width: 100%;
+									margin: 7px 0;
+								}
+
+								.item-price {
+									display: inline-block;
+									height: 20px;
+									line-height: 20px;
+									font-size: 18px;
+									color: @default-red;
+									width: 100%;
+								}
+							}
+
+							.item-hover {
+								position: absolute;
+								top: -100%;
+								left: 0px;
+								width: 100%;
+								height: 100%;
+								background: rgba(0, 0, 0, .9);
+								padding: 40px 20px;
+
+								.item-hover-title {
+									font-size: 16px;
+									color: @default-yellow;
+									margin: 0;
+									padding: 0;
+									font-weight: 300;
+								}
+
+								.item-hover-line {
+									width: 32px;
+									height: 15px;
+									border-top: 1px solid @default-yellow;
+									margin-top: 3px;
+									margin-bottom: 0;
+								}
+
+								.item-hover-info {
+									font-size: 14px;
+									color: #fff;
+									margin: 0 0 20px 0;
+									padding: 0;
+									font-weight: 300;
+								}
+							}
+						}
+
+						.full-li {
+							margin: 0 2% 20px 0;
+							width: 18%;
+						}
+					}
+				}
+
+				.full-ul {
+					width: 100%;
+				}
+
+				.bg {
+					position: absolute;
+					width: 100%;
+					height: 450px;
+					left: 0px;
+					margin-top: -420px;
+					background: url("../images/price/bg.jpg") no-repeat;
+					background-size: cover;
+					z-index: -1;
+				}
+
+				.pad-bg {
+					height: 430px;
+					margin-top: 180px;
+				}
+			}
+		}
 	}
 }
 

@@ -1,29 +1,29 @@
 <html>
 <head>
-    <title>{{title}}</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <link rel="icon" href="/images//common/icon.png"/>
-    <link rel="stylesheet/less" type="text/css" href="/less/libs/bootstrap.less"/>
-    <link rel="stylesheet/less" type="text/css" href="/less/common.less"/>
-    {{{block "stylesheets"}}}
-    <script type="text/javascript" src="/js/libs/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/libs/bootstrap.min.js"></script>
-    <!--less预编译脚本一定要在.less文件之后引入--->
-    <script type="text/javascript" src="/js/libs/less.min.js"></script>
-    <!--[if IE]>
-    <script src="/js/libs/html5.min.js"></script>
-    <![endif]-->
-    {{{block "libs"}}}
+	<title>{{title}}</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<link rel="icon" href="/images//common/icon.png"/>
+	<link rel="stylesheet/less" type="text/css" href="/less/libs/bootstrap.less"/>
+	<link rel="stylesheet/less" type="text/css" href="/less/common.less"/>
+	{{{block "stylesheets"}}}
+	<script type="text/javascript" src="/js/libs/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/libs/bootstrap.min.js"></script>
+	<!--less预编译脚本一定要在.less文件之后引入--->
+	<script type="text/javascript" src="/js/libs/less.min.js"></script>
+	<!--[if IE]>
+	<script src="/js/libs/html5.min.js"></script>
+	<![endif]-->
+	{{{block "libs"}}}
 </head>
 
 <body>
-    <div id="apple">
-        {{> header}}
-        {{{body}}}
-        {{> footer}}
-    </div>
-    <script src="/js/common/base.js"></script>
-    {{{block "scripts"}}}
+	<div class="apple">
+		{{> header}}
+		{{{body}}}
+		{{> footer}}
+	</div>
+	<script src="/js/common/base.js"></script>
+	{{{block "scripts"}}}
 </body>
 
 </html>
