@@ -1,7 +1,6 @@
 // 载入需要的依赖和插件
 var gulp = require('gulp'),
 	less = require('gulp-less'),                    // less 编译成 css
-	minifyCss = require('gulp-clean-css'),         // css 压缩
 	rev = require('gulp-rev'),                      // 对文件名加MD5后缀
 	revCollector = require('gulp-rev-collector'),   // 路径替换
 	del = require('del'),                           // 删除文件
@@ -13,15 +12,11 @@ var gulp = require('gulp'),
 	cssRevSrc = _srcname + '/less/revCss',
 	cssDest = _dirname + '/client/less';
 
-// 压缩,合并 CSS,生成版本号
-gulp.task('miniCss', function () {
-	return gulp.src(cssRevSrc + '/**/*')
+// 合并 CSS,生成版本号
+gulp.task('less', function () {
+	return gulp.src(cssDest + '/**/*')
 		.pipe(less())                       // less 转 css
-		.pipe(minifyCss())                  // 压缩 css 文件
-		.pipe(rev())                        // 文件名加 MD5 后缀
-		.pipe(gulp.dest(cssDest))           // 直接输出到目标路径
-		.pipe(rev.manifest())               // 生成一个 rev-manifest.json
-		.pipe(gulp.dest(_rev + '/less'));   // 将 rev-manifest.json 保存到 rev 目录内
+		.pipe(gulp.dest(_dirname + '/less'))           // 直接输出到目标路径
 });
 
 gulp.task('revCss', function () {

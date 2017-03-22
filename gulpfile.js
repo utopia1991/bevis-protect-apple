@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 
 
 // 递归引入gulp/tasks目录下的文件
-requireDir('./gulp/tasks', { recurse: true });
+requireDir('./gulp', { recurse: true });
 
 // 清除上次打包的 assets 里面的所有文件，以及 cssRev
 gulp.task('clean', function(){
@@ -32,7 +32,6 @@ gulp.task('clean', function(){
 // build
 gulp.task('build', function (done) {
 	runSequence(
-		['images'],
 		['revCss'],
 		['miniCss', 'js'],
 		['html'],
