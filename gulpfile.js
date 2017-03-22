@@ -7,35 +7,27 @@ var gulp = require('gulp'),
 	nodemon = require('gulp-nodemon'),
 	requireDir = require('require-dir'),
 
-	_srcname = './client',
-	_dirname = './assets',
-	_rev = './rev',
-	cssSrc = _srcname + '/less/**/*',
-	jsSrc = _srcname + '/js/**/*',
-	imgSrc = _srcname + '/images/**/*',
-	cssRevSrc = _srcname + '/less/revCss',
+	cssSrc = './client/less/**/*',
+	jsSrc = './client/js/**/*',
+	imgSrc = './client/images/**/*',
 	htmlSrc = './views';
-
 
 // 递归引入gulp/tasks目录下的文件
 requireDir('./gulp', { recurse: true });
 
-// 清除上次打包的 assets 里面的所有文件，以及 cssRev
+// 清除上次打包的 assets 里面的所有文件
 gulp.task('clean', function(){
-	del([
-		_dirname +'/*',                     // 不希望删掉这个文件,取反这个匹配模式: '!dist/mobile/deploy.json'
-		_rev,
-		cssRevSrc
-	]);
+	del('./assets/*')                   // 不希望删掉这个文件: '!dist/mobile/deploy.json'
 });
 
-// build
+// 打包静态文件
 gulp.task('build', function (done) {
 	runSequence(
-		['revCss'],
-		['miniCss', 'js'],
-		['html'],
-		['delRevCss'],
+		['clean'],
+		['js'],
+		['less'],
+		['images'],
+		['fonts'],
 	done);
 });
 
