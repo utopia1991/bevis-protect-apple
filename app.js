@@ -28,5 +28,3 @@ hbs.registerHelper('block', function (name) {
 	blocks[name] = [];
 	return val;
 });
-
-hbs.registerPartials(__dirname + '/views/partials');    // 页面元素模块化
