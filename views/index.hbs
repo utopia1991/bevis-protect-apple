@@ -1,5 +1,6 @@
 {{#extend "stylesheets"}}
 	<link rel="stylesheet/less" type="text/css" href="/less/index.less"/>
+	<link href="https://cdn.jsdelivr.net/mediaelement/latest/mediaelementplayer.css" rel="stylesheet">
 {{/extend}}
 
 <div class="home-bg">
@@ -501,15 +502,15 @@
 				<div class="up-il">
 					<p class="up-title">iPhone视频<a href="#">more +</a></p>
 					<div class="home-video">
-						<a class="video" href="">
-							<img src="./images/index/view1.png" alt="">
-						</a>
+						<video class="mejs__player video" width="100%" height="100%" preload="none" style="max-width: 100%" poster="./images/index/view1.png">
+							<source src="./images/index/demo.mp4" width="100%" type="video/mp4">
+						</video>
 						<a class="video-label" href="">爱恨交加，Google Pixel XL详细评测</a>
 					</div>
 					<div class="home-video">
-						<a class="video" href="">
-							<img src="./images/index/view2.png" alt="">
-						</a>
+						<video class="mejs__player video" width="100%" height="100%" preload="none" style="max-width: 100%" poster="./images/index/view2.png">
+							<source src="./images/index/demo.mp4" width="100%" type="video/mp4">
+						</video>
 						<a class="video-label" href="">爱恨交加，Google Pixel XL详细评测</a>
 					</div>
 				</div>
@@ -545,9 +546,11 @@
 					</div>
 				</div>
 				<div class="home-shop-items">
-					<a class="home-items-left">
-						<img src="./images/index/total-view.png" alt=""/>
-					</a>
+					<div class="home-items-left">
+						<div class="items-count">我们为您精心推荐了<span>30<span>件</div>
+						<p>iPhone6/6s Plus配件</p>
+						<a href="">全部浏览</a>
+					</div>
 					<div class="home-items-right">
 						<ul class="home-items-ul">
 							<li class="home-items-li">
@@ -714,9 +717,11 @@
 					</div>
 				</div>
 				<div class="home-shop-items">
-					<a class="home-items-left">
-						<img src="./images/index/total-view.png" alt=""/>
-					</a>
+					<div class="home-items-left">
+						<div class="items-count">我们为您精心推荐了<span>30<span>件</div>
+						<p>iPhone6/6s Plus配件</p>
+						<a href="">全部浏览</a>
+					</div>
 					<div class="home-items-right">
 						<ul class="home-items-ul">
 							<li class="home-items-li">
@@ -883,9 +888,11 @@
 					</div>
 				</div>
 				<div class="home-shop-items">
-					<a class="home-items-left">
-						<img src="./images/index/total-view.png" alt=""/>
-					</a>
+					<div class="home-items-left">
+						<div class="items-count">我们为您精心推荐了<span>30<span>件</div>
+						<p>iPhone6/6s Plus配件</p>
+						<a href="">全部浏览</a>
+					</div>
 					<div class="home-items-right">
 						<ul class="home-items-ul">
 							<li class="home-items-li">
@@ -1420,10 +1427,11 @@
 			<div class="home-shop-items">
 				<div class="home-items-right full-ul">
 					<ul class="home-items-ul full-items-ul">
-						<li class="home-items-li full-li">
-							<a href="">
-								<img src="./images/index/total-view-small.png" alt="" width="100%"/>
-							</a>
+						<li class="home-items-li full-li full-li-first">
+							<div class="li-p-1">过去24小时内</div>
+							<div class="items-count">我们为您精心推荐了<span>30<span>件</div>
+							<div class="li-p-2">iPhone6/6s Plus配件</div>
+							<a href="">全部浏览</a>
 						</li>
 						<li class="home-items-li full-li">
 							<div class="item-active">
@@ -1573,7 +1581,6 @@
 				</div>
 				<div class="bg pad-bg"></div>
 			</div>
-		</div>
 		</div>
 		<div class="home-mac">
 			<div class="price-product-line">
@@ -1967,10 +1974,11 @@
 			<div class="home-shop-items">
 				<div class="home-items-right full-ul">
 					<ul class="home-items-ul full-items-ul">
-						<li class="home-items-li full-li">
-							<a href="">
-								<img src="./images/index/total-view-small.png" alt="" width="100%"/>
-							</a>
+						<li class="home-items-li full-li full-li-first">
+							<div class="li-p-1">过去24小时内</div>
+							<div class="items-count">我们为您精心推荐了<span>30<span>件</div>
+							<div class="li-p-2">iPhone6/6s Plus配件</div>
+							<a href="">全部浏览</a>
 						</li>
 						<li class="home-items-li full-li">
 							<div class="item-active">
@@ -2121,10 +2129,11 @@
 				<div class="bg pad-bg"></div>
 			</div>
 		</div>
-		</div>
 	</div>
 </div>
+</div>
 
+<script src="https://cdn.jsdelivr.net/mediaelement/latest/mediaelement-and-player.min.js"></script>
 <script>
 	$(".home-items-li").hover(
 		function() {
