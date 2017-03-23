@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 	jsDest = './assets/js/',
 
 	cssSrc = './client/less/**/*',
-	cssDest = './assets/less/';
+	cssDest = './assets/css/';
 
 // 压缩 images
 gulp.task('images', function(){
@@ -29,8 +29,8 @@ gulp.task('fonts', function(){
 
 // 把 client 里面的 js 全部复制到 assets 中
 gulp.task('js', function() {
-return gulp.src(jsSrc)
-	.pipe(gulp.dest(jsDest))
+	return gulp.src(jsSrc)
+		.pipe(gulp.dest(jsDest))
 });
 
 // less 转 css

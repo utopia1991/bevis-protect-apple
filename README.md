@@ -13,5 +13,6 @@ To install the node packages, and also keep them updated, execute the following 
 ## Build the code
 
 ```
-> gulp build
+1. gulp clean
+2. gulp build
 ```

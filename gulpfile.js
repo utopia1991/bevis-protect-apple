@@ -17,7 +17,7 @@ requireDir('./gulp', { recurse: true });
 
 // 清除上次打包的 assets 里面的所有文件
 gulp.task('clean', function(){
-	del('./assets/*')                   // 不希望删掉这个文件: '!dist/mobile/deploy.json'
+	del('./assets/**/*')                   // 不希望删掉这个文件: '!dist/mobile/deploy.json'
 });
 
 // 打包静态文件
